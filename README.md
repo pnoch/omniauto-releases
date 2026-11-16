@@ -11,10 +11,9 @@ The page is in `docs/` and is served by GitHub Pages at
 domain is live).
 
 - **Custom domain:** `docs/CNAME` contains
-  `omniauto.siamcreations.app`. At the DNS provider, add a `CNAME` record for
-  `omniauto` pointing to `pnoch.github.io` (remove the old parking `A`/`AAAA`
-  records for the same name). If a CNAME cannot be used, use GitHub Pages'
-  A/AAAA addresses instead:
+  `omniauto.siamcreations.app`. The IONOS zone uses GitHub Pages A/AAAA
+  addresses (not a CNAME) because the existing MX/SPF records at the same name
+  would conflict with a CNAME:
   - `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
     `185.199.111.153`
   - `2606:50c0:8000::153`, `2606:50c0:8001::153`,
