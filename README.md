@@ -47,3 +47,4 @@ After the `omniauto` CNAME is live, GitHub Pages verifies the domain and issues
 the certificate. In the repository's **Settings → Pages**, confirm the custom
 domain is `omniauto.siamcreations.app` and enable **Enforce HTTPS**. The project
 URL remains available until then.
+
