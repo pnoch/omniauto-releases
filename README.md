@@ -5,12 +5,12 @@ in a separate private repository.
 
 ## Website
 
-The page is in `docs/` and is served by GitHub Pages at
+The page is at the repository root and is served by GitHub Pages at
 <https://omniauto.siamcreations.app/> (custom domain) and
 <https://pnoch.github.io/omniauto-releases/> (project URL until the custom
 domain is live).
 
-- **Custom domain:** `docs/CNAME` contains
+- **Custom domain:** `CNAME` contains
   `omniauto.siamcreations.app`. The IONOS zone uses a `CNAME` record for
   `omniauto` pointing to `pnoch.github.io`; the old MX/SPF, autodiscover and
   DKIM records at the app subdomain were removed. If a CNAME cannot be used,
@@ -19,7 +19,7 @@ domain is live).
     `185.199.111.153`
   - `2606:50c0:8000::153`, `2606:50c0:8001::153`,
     `2606:50c0:8002::153`, `2606:50c0:8003::153`
-- **Pages source:** `main` / `docs`, with HTTPS enforced after DNS verifies.
+- **Pages source:** `main` / root, with HTTPS enforced after DNS verifies.
 - **Android download:** the page reads the rolling `android-latest` release in
   this repository through the GitHub API and links the first `.apk` asset.
   Publish a new test build by replacing that release's asset (or deleting and
@@ -32,14 +32,14 @@ domain is live).
 
 ## Updating screenshots
 
-Replace `docs/screenshots/player-fullscreen.png` (wide 1280×720) and
-`docs/screenshots/player-sheet.png` (phone portrait) with fresh captures. Keep
-the cluster image at `docs/screenshots/cluster-cue.png`.
+Replace `screenshots/android-auto.png` (wide) and `screenshots/cluster-cue.png`
+(phone) with fresh captures. Keep the cluster page image at
+`screenshots/cluster-page.png`.
 
 ## Updating the page
 
-Edit `docs/index.html` for copy or the current SHA-256 line, then push to
-`main`. GitHub Pages rebuilds from `docs/`.
+Edit `index.html` for copy or the current SHA-256 line, then push to `main`.
+GitHub Pages rebuilds from the repository root.
 
 ## DNS / HTTPS
 
